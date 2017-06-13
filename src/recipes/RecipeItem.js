@@ -5,6 +5,8 @@ import Pescatarian from '../images/pescatarian.svg'
 import Vegetarian from '../images/vegetarian.svg'
 import Vegan from '../images/vegan.svg'
 import LikeButton from '../components/LikeButton'
+import './RecipeItem.css'
+
 
 class RecipeItem extends PureComponent {
   static propTypes = {
@@ -20,7 +22,7 @@ class RecipeItem extends PureComponent {
 
     return(
       <article className="recipe">
-        <h1>{ title }</h1>
+        <h2>{ title }</h2>
         <div>
           <p>{ summary }</p>
           <ul>

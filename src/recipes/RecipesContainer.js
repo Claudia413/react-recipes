@@ -2,6 +2,7 @@
 import React, { PureComponent } from 'react'
 import Title from '../components/Title'
 import RecipeItem from './RecipeItem'
+import './RecipesContainer.css'
 
 class RecipesContainer extends PureComponent {
   renderRecipe(recipe, index) {
@@ -16,7 +17,9 @@ class RecipesContainer extends PureComponent {
         </header>
 
         <main>
-          { this.props.recipes.map(this.renderRecipe) }
+          <div className="row">
+            { this.props.recipes.map(this.renderRecipe) }
+          </div>
         </main>
       </div>
     )
