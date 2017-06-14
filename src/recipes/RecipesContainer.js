@@ -4,10 +4,15 @@ import { connect } from 'react-redux'
 import Title from '../components/Title'
 import RecipeItem from './RecipeItem'
 import './RecipesContainer.css'
+import RecipeEditor from './RecipeEditor'
+import './RecipeEditor.css'
 
 export class RecipesContainer extends PureComponent {
   renderRecipe(recipe, index) {
     return <RecipeItem key={index} { ...recipe }  />
+  }
+  renderNewRecipe() {
+    return <RecipeEditor />
   }
 
   render() {
@@ -19,7 +24,9 @@ export class RecipesContainer extends PureComponent {
 
         <main>
           { this.props.recipes.map(this.renderRecipe.bind(this)) }
+          <RecipeEditor />
         </main>
+
       </div>
     )
   }
